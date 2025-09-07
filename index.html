@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events - Basic Interactivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖱️ JavaScript Events & Basic Interactivity</h1>
+            <p>Explore different event handlers and interactive elements</p>
+        </header>
+
+        <section class="demo-section">
+            <h2>Mouse Events</h2>
+            <div class="mouse-demo">
+                <div id="mouse-target" class="interactive-box">
+                    Move mouse over me! 🎯
+                </div>
+                <div class="event-log">
+                    <h3>Mouse Event Log:</h3>
+                    <ul id="mouse-log"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Click Events</h2>
+            <div class="click-demo">
+                <button id="click-button" class="action-button">Click Me!</button>
+                <button id="double-click-button" class="action-button secondary">Double Click Me!</button>
+                <button id="toggle-button" class="action-button toggle">Toggle Background</button>
+                <div class="counter">
+                    <p>Clicks: <span id="click-count">0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Form Events</h2>
+            <div class="form-demo">
+                <form id="demo-form">
+                    <div class="form-group">
+                        <label for="name-input">Name:</label>
+                        <input type="text" id="name-input" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-input">Email:</label>
+                        <input type="email" id="email-input" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-textarea">Message:</label>
+                        <textarea id="message-textarea" placeholder="Enter your message"></textarea>
+                    </div>
+
+                    <button type="submit" class="action-button">Submit Form</button>
+                </form>
+
+                <div class="form-feedback">
+                    <h3>Form Event Log:</h3>
+                    <ul id="form-log"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Keyboard Events</h2>
+            <div class="keyboard-demo">
+                <input type="text" id="keyboard-input" placeholder="Type something here..." class="keyboard-input">
+                <div class="key-info">
+                    <div>Last Key: <span id="last-key">None</span></div>
+                    <div>Key Code: <span id="key-code">0</span></div>
+                    <div>Key Count: <span id="key-count">0</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Focus & Blur Events</h2>
+            <div class="focus-demo">
+                <input type="text" id="focus-input" placeholder="Click here to focus">
+                <div class="focus-status">
+                    <p>Focus Status: <span id="focus-status" class="status">Not Focused</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Window Events</h2>
+            <div class="window-demo">
+                <div class="window-info">
+                    <p>Window Width: <span id="window-width">0</span>px</p>
+                    <p>Window Height: <span id="window-height">0</span>px</p>
+                    <p>Scroll Position: <span id="scroll-pos">0</span>px</p>
+                    <button id="scroll-top" class="action-button">Scroll to Top</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Interactive Features</h2>
+            <div class="interactive-features">
+                <!-- Collapsible FAQ Section -->
+                <div class="faq-section">
+                    <h3>Collapsible FAQ Section</h3>
+                    <div class="faq-item">
+                        <button class="faq-toggle">What is JavaScript? <span class="toggle-icon">▼</span></button>
+                        <div class="faq-content">
+                            <p>JavaScript is a programming language that allows you to create interactivity on web pages.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-toggle">What are events? <span class="toggle-icon">▼</span></button>
+                        <div class="faq-content">
+                            <p>Events are actions that happen in the browser, like clicking, hovering, or typing on the keyboard.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-toggle">What is DOM manipulation? <span class="toggle-icon">▼</span></button>
+                        <div class="faq-content">
+                            <p>DOM manipulation is the process of changing the content, structure, or style of a web page using JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabbed Interface -->
+                <div class="tabs-section">
+                    <h3>Tabbed Interface</h3>
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">Mouse Events</button>
+                        <button class="tab-button" data-tab="tab2">Click Events</button>
+                        <button class="tab-button" data-tab="tab3">Form Validation</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-panel active">
+                            <p>Mouse events allow you to detect user interaction with the mouse, such as hovering, clicking, and moving over elements.</p>
+                            <div class="mini-mouse-demo">
+                                <div id="mini-mouse-target">Hover over me!</div>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab-panel">
+                            <p>Click events are triggered when a user clicks on an element. You can respond with alerts, animations, or state changes.</p>
+                            <button id="mini-click-demo" class="action-button small">Click Me!</button>
+                            <p id="click-message">Click count: <span id="mini-click-count">0</span></p>
+                        </div>
+                        <div id="tab3" class="tab-panel">
+                            <p>Form validation ensures data quality by checking user input before processing. Use regular expressions and conditional logic.</p>
+                            <input type="email" id="mini-email-validation" placeholder="Enter email to validate">
+                            <p id="validation-result"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Menu -->
+                <div class="dropdown-section">
+                    <h3>Simple Dropdown Menu</h3>
+                    <div class="dropdown-container">
+                        <button class="dropdown-toggle" id="dropdown-toggle">Select an Option ▼</button>
+                        <div class="dropdown-menu" id="dropdown-menu">
+                            <div class="dropdown-item" data-value="option1">Option 1 - Mouse Events</div>
+                            <div class="dropdown-item" data-value="option2">Option 2 - Click Events</div>
+                            <div class="dropdown-item" data-value="option3">Option 3 - Form Validation</div>
+                            <div class="dropdown-item" data-value="option4">Option 4 - Keyboard Events</div>
+                        </div>
+                    </div>
+                    <p id="dropdown-selection" class="dropdown-selection">No selection made</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Dynamic Content Management</h2>
+            <div class="dynamic-demo">
+                <button id="add-item" class="action-button">Add New Item</button>
+                <button id="remove-item" class="action-button secondary">Remove Last Item</button>
+                <button id="clear-all" class="action-button danger">Clear All</button>
+                <ul id="dynamic-list" class="dynamic-list">
+                    <li>Item 1 <button class="delete-item">❌</button></li>
+                    <li>Item 2 <button class="delete-item">❌</button></li>
+                    <li>Item 3 <button class="delete-item">❌</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>JavaScript Events Demo - Created for learning interactive web development</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
